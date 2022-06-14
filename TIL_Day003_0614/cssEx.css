@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+#wrap {
+					margin:0 auto; /* wrap 자신이 가운데 정렬 */
+					width:800px;
+					border:solid 1px black;
+					text-align:center; /* 안에 들어 있는 내용을 가운데 정렬 */
+				}
+
+.mainMenuBox div {
+					margin:0 auto;
+					display:inline-block;
+					background-color:#555;
+					color: white;
+					width:180px;
+					height:40px;
+					text-align:center;
+				}
+				
+.mainMenuBox div:hover {
+					color:red;
+					text-decoration:underline;
+					}
+
+			
+.productBox div {
+					margin:0 auto;
+					display:inline-block;
+					width:160px;
+					text-align:center;
+				}
+
+#box1 div:nth-child(2){ 
+					color:blue;
+					font-weight:bold;
+					text-align:center;
+}
+#box1 div:nth-child(3){ 
+					color:orange;
+					text-align:center;
+}
+
+#box2 div {
+	
+					text-align:center;
+}
+
+#box2 div:nth-child(2){ 
+					color:blue;
+					font-weight:bold;
+					text-align:center;
+}
+#box2 div:nth-child(3){ 
+					color:orange;
+					text-align:center;
+}
+
+#box3 div:nth-child(2){ 
+					color:blue;
+					font-weight:bold;
+}
+#box3 div:nth-child(3){ 
+					color:orange;
+}
+
+.infoBox div{
+					margin:0 auto;
+					display:inline-block;
+					width:350px;
+					color:blue;
+					text-align:left;
+					border:solid 1px black;
+					border-radius:10px;
+					
+}
+.infoBox h5 {color:black;}
+ul {list-style-type:none;}
+#caption li:nth-child(1):hover {
+					color:red;
+					}
+#caption li:nth-child(2):hover {
+					color:red;
+					}
+#caption li:nth-child(3):hover {
+					color:red;
+					}					
+#community li:nth-child(1):hover {
+					color:red;
+					}
+#community li:nth-child(2):hover {
+					color:red;
+					}
+#community li:nth-child(3):hover {
+					color:red;
+					}			
