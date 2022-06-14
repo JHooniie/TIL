@@ -1,41 +1,75 @@
 @charset "UTF-8";
 
+*{
+	margin:0;
+	padding:0;
+}
+/* 
+*=body
+*/
 #wrap {
 					margin:0 auto; /* wrap 자신이 가운데 정렬 */
 					width:800px;
-					border:solid 1px black;
+					/* border:solid 1px black; */ /* 내가 구별하기 위해 작성해둔 것 필요없음 */
 					text-align:center; /* 안에 들어 있는 내용을 가운데 정렬 */
 				}
 
-.mainMenuBox div {
-					margin:0 auto;
-					display:inline-block;
+#mainMenuBox {
+					/* margin:0 auto; */	/*제일 위에서 margin과 padding을 0으로 설정해서 필요x*/
+					/* display:inline-block; */	/* <li>태그로 정렬 */
 					background-color:#555;
-					color: white;
-					width:180px;
+					/* color: white; */		/* 제일 하부에서 색 조정 */
+					/* width:180px;
 					height:40px;
-					text-align:center;
-				}
+					text-align:center; */	/* 하부에서 전체 조정 후 추가 */
+					height:35px;
+					line-height:35px;
+					margin-top:30px;
+					margin-bottom:30px;
+					/* height 설정 안 할시 화면에 표시되지 않음*/
+			}
 				
-.mainMenuBox div:hover {
-					color:red;
-					text-decoration:underline;
+#mainMenuBox ul {
+					padding-left:0;
+					margin:0;
+					list-style:none;
 					}
-
-			
-.productBox div {
-					margin:0 auto;
-					display:inline-block;
-					width:160px;
-					text-align:center;
-				}
-
-#box1 div:nth-child(2){ 
-					color:blue;
-					font-weight:bold;
+#mainMenuBox ul li{
+					float:left;	/* 블록요소를 가진 <ul>태그를 한줄로 정리시켜준다 */
+					width:25%;	/* 크기를 세세하게 정하기보다는 비율로 정함*/
 					text-align:center;
 }
-#box1 div:nth-child(3){ 
+#mainMenuBox ul li a {
+					color:#ffffff;
+					text-decoration:none; /* <a> 태그 밑줄 없애기 */
+					display:block; /* 인라인 속성을 가지고 있는 <a>에 블록 속성을  부여함으로써 클릭 범위를 최대로 확장시킴*/
+					font-size:14px;
+					font-weight:bold;
+}
+#mainMenuBox ul li a:hover {
+					color:red;
+					text-decoration:underline; 
+					background-color:black;	/* 가시성을 높여주는 옵션 */					
+
+}			
+#productBox {
+					/* margin:0 auto; */	/*위에서 표시*/
+					/* display:inline-block;
+					width:160px;
+					text-align:center; */
+					/* 블록 설정은 젤 위에서가 아닌 하부 구역들에서 */
+					margin-bottom:30px;
+				}
+
+#productBox div{ 
+					/* color:blue;
+					font-weight:bold;
+					text-align:center; */
+					/* 세부 사항들은 하부 구역에서 해당 부분에서는 블록정리를 한다 */
+					display:inline-block;
+					margin:20px;
+}
+/* #box1 div:nth-child(3){ 
 					color:orange;
 					text-align:center;
 }
@@ -61,20 +95,34 @@
 }
 #box3 div:nth-child(3){ 
 					color:orange;
-}
+} */
+/* 큰 <div>로 블록 정렬 후 자식, 자손 상속 선택자로 내부 설정하면 됨 */
 
-.infoBox div{
-					margin:0 auto;
+#productBox div > h3.prdTitle{
+								margin-bottom:5px;
+								color:blue;
+								font-weight:bold;
+}
+#productBox div > p.prdPrice{
+								color:#ff7800;
+}
+#infoBox div.box{
+					/* margin:0 auto; */	/* 위에서 전체 속성 추가 */
 					display:inline-block;
-					width:350px;
-					color:blue;
+					/* width:350px; */		/* 비율로 조정 */
+					width:42%;
+					height:150px;
+					/* color:blue; */		/* <a>설정 시 자동으로 파랑색(밑줄이 있는지 확인 후 <a>여부 확인*/
 					text-align:left;
 					border:solid 1px black;
 					border-radius:10px;
+					margin:10px;
+					padding:5px;
 					
 }
-.infoBox h5 {color:black;}
-ul {list-style-type:none;}
+/* #infoBox h5 {
+	color:black;} */ 
+/* ul {list-style-type:none;}
 #caption li:nth-child(1):hover {
 					color:red;
 					}
@@ -92,4 +140,12 @@ ul {list-style-type:none;}
 					}
 #community li:nth-child(3):hover {
 					color:red;
-					}			
+					}			 */
+/* <ul>태그가 아닌 <div>로 구역 설정 후 <a> 설정해야 함 */
+#infoBox div.box2 hr {
+						margin:5px;
+}
+
+#infoBox div.box2 a:hover {
+							color:red;
+}

@@ -2,53 +2,58 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>Insert title here</title>
+			<title>CSS 종합 연습문제</title>
 			<link rel="stylesheet" type="text/css" href="cssEx.css">
 		</head>
 	<body>
 		<div id="wrap">
 			<div id="mainMenuBox">
-				<ul>
-				<li>패션잡화</li>
-				<li>주방용품</li>>
-				<li>생활건강</li>
-				<li>DIY가구</li>
-				</ul>
+				<ul id=""menuItem>
+				<li><a href="#">패션잡화</a></li>
+				<li><a href="#">주방용품</a></li>
+				<li><a href="#">생활건강</a></li>
+				<li><a href="#">DIY가구</a></li>
+				</ul>	<!-- 
+					1.처음에는 <div>로 정리 했었음
+					2. a처리 해줘야함
+						 -->
 			</div>
 			<div id="productBox">
 				<div class="box1">
 					<img src="image/fashion1.png">
-					<h3>캐주얼화<br> 스니커즈</h3>
-					<p>35,000원</p>
+					<h3 class="prdTitle">캐주얼화<br> 스니커즈</h3>
+					<p class="prdPrice">35,000원</p>
 				</div>
 				<div class="box1">
 					<img src="image/fashion2.png">
-					<h3>미니크로스<br> 여성 가방</h3>
-					<p>20,000원</p>
+					<h3 class="prdTitle">미니크로스<br> 여성 가방</h3>
+					<p class="prdPrice">20,000원</p>
 				</div>
 				<div class="box1">
 					<img src="image/fashion3.png">
-					<h3>페이퍼플레인<br> 겨울 신발</h3>
-					<p>25,800원</p>
+					<h3 class="prdTitle">페이퍼플레인<br> 겨울 신발</h3>
+					<p class="prdPrice">25,800원</p>
 				</div>
+				<!-- 상표명과 상표가격 클래스 처리 -->
 			</div>
 			<div id="infoBox">
 				<div class="box2">
 					<h5>공지사항</h5>
 					<hr>
 						<div>
-							[배송] : 무료배송 변경 안내 2022.03.25
-							[전시] : DIY 가구 전시 안내 2022.04.20
-							[판매] : 11월 특가 상품 안내 2022.06.10
+							<a href="#">[배송] : 무료배송 변경 안내 2022.03.25</a><br>
+							<a href="#">[전시] : DIY 가구 전시 안내 2022.04.20</a><br>
+							<a href="#">[판매] : 11월 특가 상품 안내 2022.06.10</a><br>
 						</div>
 				</div>
 				<div class="box2">
 					<h5>커뮤니티</h5>
 						<hr>
 						<div>
-							[레시피] : 살 안찌는 야식 만들기
-							[가구] : 헌집.새집 베스트 가구
-							[후기] : 배송이 잘못 됐어요 ㅠㅠ
+							<a href="#">[레시피] : 살 안찌는 야식 만들기</a><br>
+							<a href="#">[가구] : 헌집.새집 베스트 가구</a><br>
+							<a href="#">[후기] : 배송이 잘못 됐어요 ㅠㅠ</a><br>
+							<!-- a 넣어줘야 함 -->
 						</div>
 				</div>
 			</div>
