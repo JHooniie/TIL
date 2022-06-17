@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>함수 반환 값 연습문제</title>
+			<script type="text/javascript">
+				function start() {
+					
+					isStart = confirm("성적을 입력하시겠습니까?")
+					if(isStart == true){	//true를 넣지 않아도 실행
+						input();
+					}else{alert("종료합니다")
+				}
+				}
+				function input(){
+					/* kor = prompt("국어 점수 입력 :");
+					eng = prompt("영어 점수 입력 :");
+					math = prompt("수학 점수 입력 :"); */	//prompt를 형변환 하면 됨
+					// prompt를 Number를 감싸지 않아서 밑의 리턴값에서 객체마다 리턴을 씌웠음
+					// 급한 마음에 여기서 객체에 Number를 사용했지만 객체 초기화 중이라 사용X
+
+					kor = Number(prompt("국어 점수 입력 :"));
+					eng = Number(prompt("영어 점수 입력 :"));
+					math = Number(prompt("수학 점수 입력 :"));
+					
+					/* return alert("평균 : " + (Number(kor) + Number(eng) + Number(math))/3); */
+					
+					var evg = (kor + eng + math) / 3;
+					return  alert("평균 : " + evg.toFixed(2));
+					//toFixed()를 사용하면 소수점 아래 지정 숫자까지만 표기한다.
+					}
+				
+			
+				
+				
+				
+			</script>
+		</head>
+	<body>
+		<button onClick="start()">성적 입력</button>
+	</body>
+</html>

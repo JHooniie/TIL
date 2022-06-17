@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>화살표 함수</title>
+			<script type="text/javascript">
+				/* let num = [1,2,3,4,5];
+				
+				num.forEach(x => {		// 매개변수 1개인 경우 괄호() 생략 가능
+					console.log(x*10);
+				}) */
+				
+				let fruits = ["사과", "포도", "수박"];
+				
+				fruits.forEach((item, index, fruits) => {	// 매개변수 3개인 경우 괄호 생략 불가
+					console.log(item, index, fruits[index]);
+				}) 
+				// foreach의 경우 for의 조건식과 실행문을 적게 적을 수 있는 내장함수이다.
+				//객체.forEach(function(i){ console.log(i) });가 기본형태이며 위의 방식으로 화살표로 작성해도 된다.
+			</script>
+		</head>
+	<body>
+		
+	</body>
+</html>

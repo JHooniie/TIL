@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>string_charAt 예제</title>
+			<script type="text/javascript">
+			// 입력
+			var str = prompt("숫자 입력");
+			// 입력된 모든 문자를 하나씩 검색 : for
+			// 숫자가 아니면 alert()	: if
+			// 숫자 '0'~'9'
+			for(var i=0; i<str.length;i++){
+					
+				//if(str.charAt(i) < '0' || str.charAt(i) >'9'){
+					if(!('0' <= str.charAt(i) && str.charAt(i) <= '9')){
+						alert("숫자 형식이 아닙니다.");
+						break;
+					}
+			}
+				document.write(str);
+			// 조건식 작성을 즉시 해내지 못함
+			// 또한 charAt()앞에 객체를 적는것을 까먹음
+
+
+			/* for(var i=0; i<str.length;i++){
+					
+				if(charAt(i) !=char){
+						alert("숫자 형식이 아닙니다.");
+						document.write(str);
+					}else{
+						document.write(str);
+					}
+				} */
+			
+			
+			
+			/* var str = prompt("숫자 입력");
+				for(var i=0; i<str.String();i++){
+					
+				}
+				 */
+				
+			</script>
+		</head>
+	<body>
+		
+	</body>
+</html>
